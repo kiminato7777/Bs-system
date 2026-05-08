@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Kantumruy';
+  src: url('/fonts/Kantumruy-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kantumruy';
+  src: url('/fonts/Kantumruy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kantumruy';
+  src: url('/fonts/Kantumruy-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --background: #f8fafc;
+  --foreground: #020617;
+  --card: #ffffff;
+  --card-border: #f1f5f9;
+  --sidebar: #1e1b4b;
+  --sidebar-foreground: #ffffff;
+  --primary: #4f46e5;
+  --muted: #64748b;
+  --input: #f8fafc;
+  --glass: rgba(255, 255, 255, 0.7);
+}
+
+.dark {
+  --background: #020617;
+  --foreground: #f8fafc;
+  --card: #0f172a;
+  --card-border: #1e293b;
+  --sidebar: #020617;
+  --sidebar-foreground: #f8fafc;
+  --primary: #818cf8;
+  --muted: #94a3b8;
+  --input: #1e293b;
+  --glass: rgba(15, 23, 42, 0.7);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Kantumruy', sans-serif;
+  line-height: 1.8;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.kh-bold {
+  font-family: 'Kantumruy', sans-serif;
+  font-weight: 700;
+}
+
+@layer components {
+  .table-responsive {
+    @apply overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+}
