@@ -9,7 +9,6 @@ import {
   Car, 
   Eye, 
   Edit2, 
-  Trash2,
   CheckCircle,
   Clock,
   Ban,

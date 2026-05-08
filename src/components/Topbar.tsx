@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { 
   Search, 
   Bell, 
-  Globe, 
   User, 
   Menu, 
   ChevronDown, 
