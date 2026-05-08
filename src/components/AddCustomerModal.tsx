@@ -43,7 +43,7 @@ interface AddCustomerModalProps {
   customerToEdit?: any;
 }
 
-type TabType = 'basic' | 'address' | 'identity' | 'job' | 'guarantor' | 'documents' | 'risk' | 'status';
+type TabType = 'basic' | 'address' | 'identity' | 'job' | 'guarantor' | 'documents' | 'risk' | 'others' | 'status';
 
 export default function AddCustomerModal({ isOpen, onClose, customerToEdit }: AddCustomerModalProps) {
   const [activeTab, setActiveTab] = useState<TabType>('basic');
@@ -434,7 +434,7 @@ export default function AddCustomerModal({ isOpen, onClose, customerToEdit }: Ad
                             onClick={checkEligibility}
                             className="bg-emerald-50 text-emerald-600 px-4 py-2 rounded-xl font-bold text-xs flex items-center gap-2 hover:bg-emerald-100 transition-all font-kantumruy"
                           >
-                            <ShieldIcon size={14} /> ពិនិត្យសេចក្តីអនុម័ត (Auto Approval)
+                            <ShieldCheck size={14} /> ពិនិត្យសេចក្តីអនុម័ត (Auto Approval)
                           </button>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -466,7 +466,7 @@ export default function AddCustomerModal({ isOpen, onClose, customerToEdit }: Ad
                              <Input label="កម្រៃជើងសារ (Commission)" name="referralCommission" value={formData.referralCommission} onChange={handleChange} placeholder="$0.00" />
                           </div>
                           <div className="md:col-span-2 grid grid-cols-2 gap-4 bg-emerald-50/30 dark:bg-emerald-900/10 p-6 rounded-3xl">
-                             <div className="col-span-2 mb-2"><SectionHeading icon={ShieldIcon} title="ធានារ៉ាប់រង (Insurance)" /></div>
+                             <div className="col-span-2 mb-2"><SectionHeading icon={ShieldCheck} title="ធានារ៉ាប់រង (Insurance)" /></div>
                              <Input label="ក្រុមហ៊ុនធានារ៉ាប់រង" name="insuranceCompany" value={formData.insuranceCompany} onChange={handleChange} placeholder="ឈ្មោះក្រុមហ៊ុន" />
                              <Input label="ថ្ងៃផុតកំណត់" name="insuranceExpireDate" type="date" value={formData.insuranceExpireDate} onChange={handleChange} />
                           </div>
